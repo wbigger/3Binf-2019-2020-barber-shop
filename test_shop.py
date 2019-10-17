@@ -8,7 +8,7 @@ def create_shop():
     max_price_euro = 30
     walk_in_start_time = 17
     walk_in_length_time = 2
-    return Shop("piazza Calamatta",open_at,close_at,min_price_euro,max_price_euro,walk_in_start_time,walk_in_length_time)
+    return Shop(address,open_at,close_at,min_price_euro,max_price_euro,walk_in_start_time,walk_in_length_time)
 
 def test_shop_address():
     shop = create_shop()
@@ -22,7 +22,8 @@ def test_shop_closing():
     shop = create_shop()
     assert shop.close_hour == 19
 
-def test_shop_opening():
+
+def test_shop_min_price():
     shop = create_shop()
     assert shop.min_price == 10
 
