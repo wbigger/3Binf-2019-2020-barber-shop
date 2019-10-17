@@ -22,7 +22,6 @@ def test_shop_closing():
     shop = create_shop()
     assert shop.close_hour == 19
 
-
 def test_shop_min_price():
     shop = create_shop()
     assert shop.min_price == 10
